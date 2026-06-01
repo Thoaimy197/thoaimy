@@ -216,16 +216,15 @@ target="_blank">
 
 </a>
 
-<a
-class="shop-btn"
-href="https://www.facebook.com/dinh.shirley"
+<a class="shop-btn"
+href="https://www.facebook.com/YOURFACEBOOK"
 target="_blank">
-
 📘 Facebook
-
 </a>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
 <script>
 
@@ -241,7 +240,15 @@ function taoLink(){
         return;
     }
 
-    window.open(link,"_blank");
+    confetti({
+        particleCount:120,
+        spread:100,
+        origin:{y:0.6}
+    });
+
+    setTimeout(function(){
+        window.open(link,"_blank");
+    },500);
 
 }
 
