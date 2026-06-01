@@ -1,3 +1,11 @@
+.avatar{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:contain;
+    background:#fff;
+    border:5px solid #e88a1f;
+}
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -33,8 +41,8 @@ body{
     width:220px;
     height:220px;
     border-radius:50%;
-    object-fit:contain;
-    background:white;
+    object-fit:cover;
+    object-position:center top;
     border:5px solid #e88a1f;
     display:block;
     margin:0 auto 20px;
@@ -49,8 +57,8 @@ h1{
 
 .subtitle{
     font-size:28px;
-    margin-bottom:20px;
     color:#555;
+    margin-bottom:20px;
 }
 
 .bio{
@@ -93,6 +101,10 @@ button{
     border-radius:12px;
     font-weight:bold;
     cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
 }
 
 .shop-btn{
@@ -146,7 +158,8 @@ h1{
 
 <div class="card">
 
-<img class="avatar"
+<img
+class="avatar"
 src="https://i.ibb.co/fTzDKWz/711729170-944482501906096-627578141581462640-n.jpg">
 
 <h1>Thoại My 🧡</h1>
@@ -161,11 +174,11 @@ src="https://i.ibb.co/fTzDKWz/711729170-944482501906096-627578141581462640-n.jpg
 
 <br><br>
 
-✨ Mình tổng hợp tại đây các sản phẩm đã tìm hiểu kỹ, lựa chọn kỹ và cảm thấy đáng để chia sẻ cho những gia đình có nhu cầu tương tự.
+✨ Mình tổng hợp tại đây những sản phẩm đã tìm hiểu kỹ, lựa chọn kỹ và cảm thấy thật sự hữu ích cho gia đình.
 
 <br><br>
 
-🧡 Mỗi lượt mua hàng qua liên kết của mình đều là một sự ủng hộ rất lớn, giúp mình có thêm động lực tiếp tục review, săn deal và chia sẻ những sản phẩm chất lượng hơn nữa.
+🧡 Mỗi lượt mua hàng qua liên kết của mình đều là một sự ủng hộ rất lớn, giúp mình có thêm động lực tiếp tục review, săn deal và chia sẻ nhiều sản phẩm chất lượng hơn.
 
 <br><br>
 
@@ -183,9 +196,12 @@ src="https://i.ibb.co/fTzDKWz/711729170-944482501906096-627578141581462640-n.jpg
 
 <input
 type="text"
+id="linkShopee"
 placeholder="https://shopee.vn/...">
 
-<button>Tạo link</button>
+<button onclick="taoLink()">
+Tạo link
+</button>
 
 </div>
 
@@ -211,31 +227,25 @@ target="_blank">
 
 </div>
 
-</body>
-</html>
-``
-
-i.ibb.co
-i.ibb.co
-.avatar{
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:center top;
-    border:5px solid #e88a1f;
-    display:block;
-    margin:0 auto 20px;
-}
 <script>
-function taoLink() {
-    let link = document.getElementById("linkShopee").value.trim();
 
-    if (link === "") {
+function taoLink(){
+
+    let link =
+    document.getElementById("linkShopee")
+    .value
+    .trim();
+
+    if(link === ""){
         alert("Vui lòng dán link Shopee");
         return;
     }
 
-    window.open(link, "_blank");
+    window.open(link,"_blank");
+
 }
+
 </script>
+
+</body>
+</html>
