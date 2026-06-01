@@ -7,16 +7,24 @@
 
 <style>
 body{
-font-family: Arial,sans-serif;
-background:#fffaf5;
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#fff8f2,#fff);
 margin:0;
-padding:30px;
+padding:20px;
 text-align:center;
 }
 
 .container{
-max-width:500px;
+max-width:700px;
 margin:auto;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+margin-bottom:20px;
 }
 
 .avatar{
@@ -24,63 +32,130 @@ width:180px;
 height:180px;
 border-radius:50%;
 object-fit:cover;
-object-position:center top;
-border:4px solid #ff6b35;
+border:5px solid #ff8c42;
 }
 
 h1{
-color:#333;
 margin-top:15px;
+color:#e86f00;
 }
 
-.bio{
+.desc{
 color:#666;
-line-height:1.6;
-margin-bottom:25px;
+line-height:1.8;
+font-size:17px;
 }
 
-.btn{
+.input-box{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+
+input{
+flex:1;
+padding:15px;
+border-radius:12px;
+border:1px solid #ddd;
+font-size:15px;
+}
+
+button{
+background:#ff8c42;
+color:white;
+border:none;
+padding:15px 25px;
+border-radius:12px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.link-btn{
 display:block;
-background:#ff6b35;
+background:#ff8c42;
 color:white;
 text-decoration:none;
-padding:15px;
-margin:12px 0;
-border-radius:14px;
+padding:16px;
+border-radius:12px;
+margin-top:15px;
 font-weight:bold;
-font-size:18px;
 }
 
-.btn:hover{
-opacity:0.9;
+.result{
+margin-top:20px;
+word-break:break-all;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<img class="avatar" src="https://i.ibb.co/fTzDKWz/711729170-944482501906096-627578141581462640-n.jpg">
+<div class="card">
+
+<img class="avatar" src="https://i.ibb.co/fTzDKWz/711729170-944482501906096-627578141581462640-n.jpg"
 
 <h1>Thoại My 🧡</h1>
 
-<p class="bio">
+<div class="desc">
 👩‍👦 Mẹ Leon & Louis<br>
-🏠 Review sản phẩm gia đình đang dùng<br>
-🛒 Chia sẻ deal hot mỗi ngày
-</p>
+🏠 Review sản phẩm gia đình đang sử dụng<br>
+🛒 Chia sẻ deal hot & sản phẩm chọn lọc mỗi ngày
+</div>
 
-<a class="btn" href="https://collshp.com/leonlouis?view=storefront">
+</div>
+
+<div class="card">
+
+<h3>DÁN LINK SẢN PHẨM SHOPEE VÀO ĐÂY</h3>
+
+<div class="input-box">
+<input id="linkInput"
+placeholder="https://shopee.vn/...">
+
+<button onclick="createLink()">
+Tạo link
+</button>
+</div>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<a class="link-btn"
+href="https://collshp.com/leonlouis?view=storefront"
+target="_blank">
 🛒 Gian hàng Shopee
 </a>
 
-<a class="btn" href="https://www.facebook.com/share/1Ejv8yDUGF/?mibextid=wwXIfr">
+<a class="link-btn"
+href="https://www.facebook.com/share/1Ejv8yDUGF/?mibextid=wwXIfr"
+target="_blank">
 📘 Facebook
 </a>
 
 </div>
+
+<script>
+function createLink(){
+
+const url =
+document.getElementById("linkInput").value;
+
+if(!url){
+alert("Vui lòng dán link Shopee");
+return;
+}
+
+document.getElementById("result").innerHTML=
+`
+<p><b>Link sản phẩm:</b></p>
+<a href="${url}" target="_blank">${url}</a>
+`;
+
+}
+</script>
 
 </body>
 </html>
