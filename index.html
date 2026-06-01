@@ -33,8 +33,8 @@ body{
     width:220px;
     height:220px;
     border-radius:50%;
-    object-fit:cover;
-    object-position:center top;
+    object-fit:contain;
+    background:white;
     border:5px solid #e88a1f;
     display:block;
     margin:0 auto 20px;
@@ -214,3 +214,28 @@ target="_blank">
 </body>
 </html>
 ``
+
+i.ibb.co
+i.ibb.co
+.avatar{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center top;
+    border:5px solid #e88a1f;
+    display:block;
+    margin:0 auto 20px;
+}
+<script>
+function taoLink() {
+    let link = document.getElementById("linkShopee").value.trim();
+
+    if (link === "") {
+        alert("Vui lòng dán link Shopee");
+        return;
+    }
+
+    window.open(link, "_blank");
+}
+</script>
