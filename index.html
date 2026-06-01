@@ -3,92 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Thoại My | Review Gia Đình</title>
 
 <style>
 body{
-font-family:Arial,sans-serif;
-background:linear-gradient(180deg,#fff8f2,#fff);
-margin:0;
-padding:20px;
-text-align:center;
+    margin:0;
+    padding:20px;
+    background:#f8f5ef;
+    font-family:Arial,sans-serif;
+    color:#444;
 }
 
 .container{
-max-width:700px;
-margin:auto;
+    max-width:700px;
+    margin:auto;
 }
 
 .card{
-background:white;
-padding:30px;
-border-radius:25px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-margin-bottom:20px;
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    margin-bottom:20px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,0.06);
 }
 
 .avatar{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:contain;
-background:white;
-border:5px solid #ff8c42;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #e88a1f;
+    display:block;
+    margin:0 auto 20px;
 }
 
-}
 h1{
-margin-top:18px;
-color:#e86f00;
-font-size:38px;
-text-align:center;
-
-.desc{
-color:#666;
-line-height:1.8;
-font-size:17px;
+    margin:10px 0;
+    color:#e88a1f;
+    font-size:38px;
 }
 
-.input-box{
-display:flex;
-gap:10px;
-margin-top:20px;
+.subtitle{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.bio{
+    line-height:1.8;
+    font-size:18px;
+}
+
+.input-card{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.06);
+    margin-bottom:20px;
+}
+
+.input-card h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.input-group{
+    display:flex;
+    gap:10px;
 }
 
 input{
-flex:1;
-padding:15px;
-border-radius:12px;
-border:1px solid #ddd;
-font-size:15px;
+    flex:1;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
 }
 
 button{
-background:#ff8c42;
-color:white;
-border:none;
-padding:15px 25px;
-border-radius:12px;
-cursor:pointer;
-font-weight:bold;
+    background:#e88a1f;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.link-btn{
-display:block;
-background:#ff8c42;
-color:white;
-text-decoration:none;
-padding:16px;
-border-radius:12px;
-margin-top:15px;
-font-weight:bold;
+.shop-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#e88a1f;
+    color:white;
+    padding:18px;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:bold;
 }
 
-.result{
-margin-top:20px;
-word-break:break-all;
+@media(max-width:768px){
+
+.avatar{
+    width:170px;
+    height:170px;
+}
+
+h1{
+    font-size:28px;
+}
+
+.subtitle{
+    font-size:22px;
+}
+
+.bio{
+    font-size:16px;
+}
+
+.input-group{
+    flex-direction:column;
+}
 }
 </style>
+
 </head>
 
 <body>
@@ -97,68 +136,61 @@ word-break:break-all;
 
 <div class="card">
 
-<img class="avatar" src="https://i.ibb.co/fTzDKWz/711729170-944482501906096-627578141581462640-n.jpg"
+<img class="avatar"
+src="https://i.ibb.co/fTzDKWz/711729170-944482501906096-627578141581462640-n.jpg">
 
 <h1>Thoại My 🧡</h1>
 
-<div class="desc">
-👩‍👦 Mẹ Leon & Louis<br>
-🏠 Review sản phẩm gia đình đang sử dụng<br>
-🛒 Chia sẻ deal hot & sản phẩm chọn lọc mỗi ngày
+<div class="subtitle">
+👩‍👦 Mẹ Leon & Louis
+</div>
+
+<div class="bio">
+
+🏡 Review những sản phẩm gia đình mình đang sử dụng thực tế mỗi ngày.
+
+<br><br>
+
+✨ Mình tổng hợp tại đây các sản phẩm đã tìm hiểu kỹ, lựa chọn kỹ và cảm thấy đáng để chia sẻ cho những gia đình có nhu cầu tương tự.
+
+<br><br>
+
+🧡 Mỗi lượt mua hàng qua liên kết của mình đều là một sự ủng hộ rất lớn, giúp mình có thêm động lực tiếp tục review, săn deal và chia sẻ những sản phẩm chất lượng hơn nữa.
+
+<br><br>
+
+🌷 Chúc bạn tìm được sản phẩm phù hợp và có trải nghiệm mua sắm thật vui nhé!
+
 </div>
 
 </div>
 
-<div class="card">
+<div class="input-card">
 
-<h3>DÁN LINK SẢN PHẨM SHOPEE VÀO ĐÂY</h3>
+<h2>DÁN LINK SẢN PHẨM SHOPEE VÀO ĐÂY</h2>
 
-<div class="input-box">
-<input id="linkInput"
+<div class="input-group">
+
+<input
+type="text"
 placeholder="https://shopee.vn/...">
 
-<button onclick="createLink()">
-Tạo link
-</button>
-</div>
-
-<div class="result" id="result"></div>
+<button>Tạo link</button>
 
 </div>
 
-<a class="link-btn"
-href="https://collshp.com/leonlouis?view=storefront"
+</div>
+
+<a
+class="shop-btn"
+href="https://collshp.com/leonlouis"
 target="_blank">
+
 🛒 Gian hàng Shopee
-</a>
 
-<a class="link-btn"
-href="https://www.facebook.com/share/1Ejv8yDUGF/?mibextid=wwXIfr"
-target="_blank">
-📘 Facebook
 </a>
 
 </div>
-
-<script>
-function createLink(){
-
-const url =
-document.getElementById("linkInput").value;
-
-if(!url){
-alert("Vui lòng dán link Shopee");
-return;
-}
-
-document.getElementById("result").innerHTML=
-`
-<p><b>Link sản phẩm:</b></p>
-<a href="${url}" target="_blank">${url}</a>
-`;
-
-}
-</script>
 
 </body>
 </html>
