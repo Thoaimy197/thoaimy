@@ -7,60 +7,64 @@
 <title>Thoại My | Review Gia Đình</title>
 
 <style>
+
 body{
     margin:0;
     padding:20px;
     background:#f8f5ef;
     font-family:Arial,sans-serif;
-    color:#444;
 }
 
 .container{
-    max-width:700px;
+    max-width:720px;
     margin:auto;
 }
 
 .card{
-    background:white;
-    border-radius:25px;
+    background:#fff;
+    border-radius:24px;
     padding:35px;
-    margin-bottom:20px;
     text-align:center;
-    box-shadow:0 3px 15px rgba(0,0,0,0.06);
+    margin-bottom:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.06);
 }
 
 .avatar{
     width:220px;
     height:220px;
     border-radius:50%;
-    object-fit:cover;
+    object-fit:contain;
+    background:white;
     border:5px solid #e88a1f;
     display:block;
     margin:0 auto 20px;
 }
 
 h1{
-    margin:10px 0;
     color:#e88a1f;
-    font-size:38px;
+    font-size:42px;
+    margin:10px 0;
+    text-align:center;
 }
 
 .subtitle{
-    font-size:30px;
+    font-size:28px;
     margin-bottom:20px;
+    color:#555;
 }
 
 .bio{
-    line-height:1.8;
     font-size:18px;
+    line-height:2;
+    color:#555;
 }
 
 .input-card{
     background:white;
-    border-radius:25px;
+    border-radius:24px;
     padding:30px;
-    box-shadow:0 3px 15px rgba(0,0,0,0.06);
     margin-bottom:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.06);
 }
 
 .input-card h2{
@@ -101,6 +105,11 @@ button{
     border-radius:15px;
     font-size:20px;
     font-weight:bold;
+    margin-bottom:12px;
+}
+
+.shop-btn:hover{
+    opacity:0.9;
 }
 
 @media(max-width:768px){
@@ -111,7 +120,7 @@ button{
 }
 
 h1{
-    font-size:28px;
+    font-size:30px;
 }
 
 .subtitle{
@@ -125,9 +134,10 @@ h1{
 .input-group{
     flex-direction:column;
 }
-}
-</style>
 
+}
+
+</style>
 </head>
 
 <body>
@@ -190,7 +200,17 @@ target="_blank">
 
 </a>
 
+<a
+class="shop-btn"
+href="https://www.facebook.com/"
+target="_blank">
+
+📘 Facebook
+
+</a>
+
 </div>
 
 </body>
 </html>
+``
